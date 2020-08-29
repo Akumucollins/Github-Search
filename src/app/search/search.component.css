@@ -3,10 +3,18 @@
 .search{
     text-align: center;
     vertical-align: middle;
-    margin-top: 2%;
+    margin: 30px auto;
+    max-width: 600px;
+
 }
 
 .search h4{
     font-family: 'Faster One', cursive;
     color: blue;
+}
+
+.search input{
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 20px;
 }
