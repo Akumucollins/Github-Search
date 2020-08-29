@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Faster+One&family=Nosifer&family=Racing+Sans+One&display=swap");
+
+.search{
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 2%;
+}
+
+.search h4{
+    font-family: 'Faster One', cursive;
+    color: blue;
+}
