@@ -14,7 +14,20 @@ export class ProfileComponent implements OnInit {
 
   constructor(private dataService: DataService) { }
 
+  findUser(){
+    this.dataService.updateProfile(this.username);
+    this.dataService.getProfile(this.username).subscribe(details => {
+      console.log(details);
+      this.details = details;
+    });
+    this.dataService.getRepo().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+  })
+}
+
   ngOnInit() {
+
   }
 
 }
