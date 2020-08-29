@@ -1,1 +1,26 @@
-<p>profile works!</p>
+<div class="container">
+    <div *ngIf="details">
+        <div class="profilecontainer">
+            <div class="profilebox">
+                <img src="{{details.avatar_url}}" alt="Profile Image" class="rounded-circle" alt="Cinque Terre"><br>
+
+                <p><a href="{{details.html_url}}" target="_blank">View profile on Github</a></p>
+            </div>
+            <div class="profilebox2">
+                <p> <b>{{details.name}}</b> ({{details.login}})</p>
+
+                <p *ngIf="details.company">Works at {{details.company}}</p>
+                <p *ngIf="details.location">Located at {{details.location}}</p>
+                <p *ngIf="details.email"><a href="emailto:{{details.email}}" target="_blank"></a>{{details.email}}</p>
+                <p>Followers:{{details.followers}} </p>
+                <p>Following:{{details.following}} </p>
+                <p>Repositories:{{details.public_repos}}</p>
+
+                <p *ngIf="details.bio">{{details.bio}}</p><br>
+                <p *ngIf="details.hireable">Available for hire</p>
+                <p *ngIf="details.blog"><a href="details.blog" target="_blank">{{details.blog}}</a></p><br>
+
+            </div>
+        </div>
+    </div>
+</div>
