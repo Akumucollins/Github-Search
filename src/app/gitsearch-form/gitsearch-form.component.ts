@@ -15,10 +15,12 @@ export class GitsearchFormComponent implements OnInit {
   constructor(private gitsearchService: GitsearchService) { }
 
   findUser() {
+
     this.gitsearchService.updateProfile(this.username);
     this.gitsearchService.getProfileInfo(this.username).subscribe(details => {
       this.details = details;
     });
+    
     this.gitsearchService.getRepoInfo().subscribe(repos => {
       this.repos = repos;
     })

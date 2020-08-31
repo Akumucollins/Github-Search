@@ -13,7 +13,6 @@ export class RepositoriesComponent implements OnInit {
   username: string;
 
   constructor(private gitsearchService: GitsearchService) { }
-
   
   findUser() {
 
