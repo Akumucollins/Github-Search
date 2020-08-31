@@ -13,7 +13,7 @@
 ---
 
 ## Description
-This project allows users to enter a GitHub username into a search input, submit it, and see names, and descriptions of that person's public repositories. A person can also look for repositories 
+This project allows users to enter a GitHub username into a search input, submit it, and see names, nicknames, locations, email account, followers, people they are following, biography and descriptions of that person's public repositories. A person can also look for repositories 
 
 ## Setup/Installation Requirements
 * get the project in github
