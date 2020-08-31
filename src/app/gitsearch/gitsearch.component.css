@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Londrina+Shadow&family=Russo+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Faster+One&family=Nosifer&family=Racing+Sans+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bungee+Shade&family=Faster+One&family=Jacques+Francois+Shadow&family=Londrina+Outline&family=Nosifer&display=swap');
 
 .banner {
   padding-left: 10px;
@@ -124,4 +125,8 @@ h5 {
 
 .repos a {
   text-decoration-line: none;
+}
+
+h6 {
+  font-family: 'Faster One', cursive;
 }
