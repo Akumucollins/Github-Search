@@ -9,13 +9,13 @@ export class DataService {
 
   private username: string;
 
-  constructor(private http: HttpClient) { }
-  getProfile(username) {
+  constructor(private http: HttpClient) {}
+  getProfileInfo(username) {
     console.log(this.username)
     return this.http.get("https://api.github.com/users/" + username + "?access_token=" + environment.githubApiKey)
 
   }
-  getRepo() {
+  getRepoInfo() {
     return this.http.get("https://api.github.com/users/" + this.username + "/repos" + "?access_token=" + environment.githubApiKey)
   }
   updateProfile(username: string) {

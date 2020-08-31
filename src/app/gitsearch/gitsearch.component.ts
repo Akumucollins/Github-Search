@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service'
-
+import { DataService } from '../data.service';
+import {FormsModule}from  '@angular/forms';
 
 @Component({
-  selector: 'app-repository',
-  templateUrl: './repository.component.html',
-  styleUrls: ['./repository.component.css']
+  selector: 'app-gitsearch',
+  templateUrl: './gitsearch.component.html',
+  styleUrls: ['./gitsearch.component.css']
 })
-export class RepositoryComponent implements OnInit {
+export class GitsearchComponent implements OnInit {
 
   details: any;
   repos: any;
@@ -26,8 +26,8 @@ export class RepositoryComponent implements OnInit {
       this.repos = repos;
     })
   }
-  
-  ngOnInit() {
+
+  ngOnInit(): void {
   }
 
 }

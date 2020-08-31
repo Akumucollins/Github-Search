@@ -6,14 +6,14 @@ import { DataService } from './data.service'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { GitsearchComponent } from './gitsearch/gitsearch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    GitsearchComponent
   ],
   imports: [
     BrowserModule,

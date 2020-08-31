@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SearchComponent } from './search/search.component';
+import { GitsearchComponent } from './gitsearch/gitsearch.component';
 import { RepositoryComponent } from './repository/repository.component';
 
 const routes: Routes = [
-  {path:"search",component:SearchComponent},
+  {path:"gitsearch",component:GitsearchComponent},
   {path:"repository",component:RepositoryComponent}
 
 ];
