@@ -8,20 +8,22 @@ import { environment } from '../environments/environment';
 export class GitsearchService {
 
   private username: string;
-  private clientdetails: string = '2010cf629ef05c2519881eee9e8b9339fc0da25c';
+  // private clientdetails = environment.githubApiKey;
+  private clientdetails: string = '519773009eeb554bd075badd8b93bba230c613c3';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getProfileInfo(username) {
     console.log(this.username)
     return this.http.get("https://api.github.com/users/" + username + "?access_token=" + this.clientdetails)
-
   }
   
   getRepoInfo() {
     return this.http.get("https://api.github.com/users/" + this.username + "/repos" + "?access_token=" + this.clientdetails)
   }
+
   updateProfile(username: string) {
     this.username = username;
   }
+
 }

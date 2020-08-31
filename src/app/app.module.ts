@@ -10,13 +10,17 @@ import { AppComponent } from './app.component';
 import { GitsearchComponent } from './gitsearch/gitsearch.component';
 import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { HighlightDirective } from './highlight.directive';
+import { DateAgoPipe } from './date-ago.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitsearchComponent,
     GitsearchFormComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    HighlightDirective,
+    DateAgoPipe,
   ],
   imports: [
     BrowserModule,

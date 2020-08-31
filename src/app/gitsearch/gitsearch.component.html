@@ -49,7 +49,7 @@
     <div *ngFor="let repo of repos">
         <div class="repos">
             <h5>{{repo.name}}</h5>
-            <p>{{repo.description}}</p><a href="{{repo.html_url}}" target="_blank">View this project on Github</a>
+            <p appHighlight>{{repo.description | dateAgo}}</p><a href="{{repo.html_url}}" target="_blank">View this project on Github</a>
         </div>
     </div>
 </div>
