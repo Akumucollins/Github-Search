@@ -8,19 +8,15 @@ import { environment } from '../environments/environment'
 export class DataService {
 
   private username: string;
-  private clientDetails: string = '${environment.githubApiKey}';
 
-  constructor(private http: HttpClient) {
-    console.log("Data is now ready");
-
-  }
+  constructor(private http: HttpClient) { }
   getProfile(username) {
     console.log(this.username)
-    return this.http.get("https://api.github.com/users/" + username + "?access_token=" + this.clientDetails)
+    return this.http.get("https://api.github.com/users/" + username + "?access_token=" + environment.githubApiKey)
 
   }
   getRepo() {
-    return this.http.get("https://api.github.com/users/" + this.username + "/repos" + "?access_token=" + this.clientDetails)
+    return this.http.get("https://api.github.com/users/" + this.username + "/repos" + "?access_token=" + environment.githubApiKey)
   }
   updateProfile(username: string) {
     this.username = username;

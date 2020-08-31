@@ -1,9 +1,13 @@
 <div class="search">
-    <h1>Welcome to <span class="text-primary">Github Google Search</span> !</h1>
-    <h4>Search for Github Users</h4>
-    <form class="form">
-        <div class="form-group">
-            <input type="text" placeholder="Enter Github Username">
-        </div>
-    </form>
+  <router-outlet></router-outlet>
+  <h1>Welcome to <span class="text-primary">Github Google Search</span> !</h1>
+  <h4>Search for Github Users</h4>
+  <form (ngSubmit)="findUser()" #searchForm="ngForm">
+    <div class="form-group">
+      <input type="text" required class="" id="username" [(ngModel)]="username" name="username"
+        placeholder="Enter Github Username">
+      <button type="submit" class="submit" name="button">Search</button><span class="subscribe-span">Click to know more
+        about github search </span>
+    </div>
+  </form>
 </div>
