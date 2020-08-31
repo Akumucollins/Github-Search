@@ -2,18 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
-import { DataService } from './data.service'
+import { GitsearchService } from './gitsearch.service'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RepositoryComponent } from './repository/repository.component';
 import { GitsearchComponent } from './gitsearch/gitsearch.component';
+import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RepositoryComponent,
-    GitsearchComponent
+    GitsearchComponent,
+    GitsearchFormComponent,
+    RepositoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,7 @@ import { GitsearchComponent } from './gitsearch/gitsearch.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [DataService],
+  providers: [GitsearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

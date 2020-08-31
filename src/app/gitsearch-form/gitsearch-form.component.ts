@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { GitsearchService } from '../gitsearch.service'
-import {FormsModule} from  '@angular/forms';
 
 @Component({
-  selector: 'app-gitsearch',
-  templateUrl: './gitsearch.component.html',
-  styleUrls: ['./gitsearch.component.css']
+  selector: 'app-gitsearch-form',
+  templateUrl: './gitsearch-form.component.html',
+  styleUrls: ['./gitsearch-form.component.css']
 })
-export class GitsearchComponent implements OnInit {
+export class GitsearchFormComponent implements OnInit {
 
   details: any;
   repos: any;
