@@ -21,8 +21,8 @@
         <div class="profilecont">
             <div class="profile">
                 <img src="{{details.avatar_url}}" alt="Profile Image" class="rounded-circle" alt="Cinque Terre"><br>
-                <p class="pl-4"><a href="{{details.html_url}}" target="_blank">View profile on Github</a></p>
-                <p>{{details.updated_date|dateAgo}} </p>
+                <p class="pl-4 pt-2"><a href="{{details.html_url}}" target="_blank">View profile on Github</a></p>
+                <p class="pl-3 text-white" style="font-family: 'Londrina Shadow', cursive;font-size: 22px;"> You've Viewed <b class="text-primary pl-1"  style="font-size: 20px;">{{today | dateAgo}}</b> </p>
             </div>
             <div class="profilebox">
                 <p appHighlight ><i class="fas fa-user text-muted"></i> <b class="pl-2 text-primary"

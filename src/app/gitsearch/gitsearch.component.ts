@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, resolveForwardRef } from '@angular/core';
 import { GitsearchService } from '../gitsearch.service'
 import {FormsModule} from  '@angular/forms';
 
@@ -12,7 +12,8 @@ export class GitsearchComponent implements OnInit {
   details: any;
   repos: any;
   username: string;
-
+  today: number = Date.now();
+  
   constructor(private gitsearchService: GitsearchService) { }
 
   findUser() {
@@ -23,8 +24,9 @@ export class GitsearchComponent implements OnInit {
     this.gitsearchService.getRepoInfo().subscribe(repos => {
       this.repos = repos;
     })
+    
   }
-
+ 
   ngOnInit(){
     
   }

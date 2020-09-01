@@ -4,7 +4,6 @@ import {FormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { GitsearchService } from './gitsearch.service'
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitsearchComponent } from './gitsearch/gitsearch.component';
@@ -27,6 +26,7 @@ import { DateAgoPipe } from './date-ago.pipe';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+
   ],
   providers: [GitsearchService],
   bootstrap: [AppComponent]
