@@ -7,11 +7,12 @@
 <div class="search">
     <h1 class="text-white">Welcome to <span class="text-primary">GitUser Google Search</span> !</h1>
     <h4>Search for a Github User Here</h4>
-    <form (ngSubmit)="findUser()" #gitsearchForm="ngForm">
+    <form (ngSubmit)="findUser($event)" #gitsearchForm="ngForm">
         <div class="form-group">
-            <input type="text" required id="username" [(ngModel)]="username" name="username"
+            <input type="text" [(ngModel)]="username" name="username"
                 placeholder="Enter Github Username">
-            <button type="submit" [disabled]="!username" class="submit" name="button">Search</button><span class="text">Scroll Down to
+            <button type="submit" [disabled]="!username" class="submit" name="button">Search</button><span
+                class="text">Scroll Down to
                 know more about the github User your have searched !!!</span>
         </div>
     </form>
@@ -22,10 +23,11 @@
             <div class="profile">
                 <img src="{{details.avatar_url}}" alt="Profile Image" class="rounded-circle" alt="Cinque Terre"><br>
                 <p class="pl-4 pt-2"><a href="{{details.html_url}}" target="_blank">View profile on Github</a></p>
-                <p class="pl-3 text-white" style="font-family: 'Londrina Shadow', cursive;font-size: 22px;"> You've Viewed <b class="text-primary pl-1"  style="font-size: 20px;">{{today | dateAgo}}</b> </p>
+                <p class="pl-3 text-white" style="font-family: 'Londrina Shadow', cursive;font-size: 22px;"> You've
+                    Viewed <b class="text-primary pl-1" style="font-size: 20px;">{{today | dateAgo}}</b> </p>
             </div>
             <div class="profilebox">
-                <p appHighlight ><i class="fas fa-user text-muted"></i> <b class="pl-2 text-primary"
+                <p appHighlight><i class="fas fa-user text-muted"></i> <b class="pl-2 text-primary"
                         style="font-family: 'Faster One', cursive;">{{details.name}}</b> ({{details.login}})</p>
                 <p *ngIf="details.company"><i class="fas fa-building text-muted"></i> Works at <b class="text-primary"
                         style="font-family: 'Faster One', cursive;">{{details.company}}</b></p>
@@ -42,15 +44,28 @@
                         style="font-family: 'Londrina Shadow', cursive;">{{details.public_repos}}</b></p>
                 <p *ngIf="details.bio"><i class="fa fa-info-circle text-muted" aria-hidden="true"></i> <b
                         class="text-primary pl-1" style="font-family: 'Faster One', cursive;">{{details.bio}}</b></p>
-                <p  *ngIf="details.blog"><a href="details.blog" target="_blank"><i class="fas fa-blog text-muted"></i> <b
+                <p *ngIf="details.blog"><a href="details.blog" target="_blank"><i class="fas fa-blog text-muted"></i> <b
                             class="pl-1">{{details.blog}}</b></a></p><br>
             </div>
         </div>
     </div>
-    <div *ngFor="let repo of repos">
-        <div class="repos">
-            <h5>{{repo.name}}</h5>
-            <p>{{repo.description}}</p><a href="{{repo.html_url}}" target="_blank">View this project on Github</a>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="cards d-flex">
+                    <div id="repos" class="card mt-2" *ngFor="let repo of repos" style="width: 25rem;">
+                        <div class="card-header">
+                            <h5 class="card-title">{{repo.name}}</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>{{repo.description}}</p>
+                        </div>
+                        <div  class="card-footer">
+                            <a href="{{repo.html_url}}" target="_blank">View this project on Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -58,5 +73,5 @@
     <h6 class="text-center text-white">
         Copyright (c) 2020 Collins Akumu
     </h6>
-    
+
 </footer>

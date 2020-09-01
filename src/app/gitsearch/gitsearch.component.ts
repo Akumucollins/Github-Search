@@ -11,12 +11,12 @@ export class GitsearchComponent implements OnInit {
 
   details: any;
   repos: any;
-  username: string;
+  username: string = "Akumucollins";
   today: number = Date.now();
   
   constructor(private gitsearchService: GitsearchService) { }
 
-  findUser() {
+  findUser(username) {
     this.gitsearchService.updateProfile(this.username);
     this.gitsearchService.getProfileInfo(this.username).subscribe(details => {
       this.details = details;
@@ -24,11 +24,11 @@ export class GitsearchComponent implements OnInit {
     this.gitsearchService.getRepoInfo().subscribe(repos => {
       this.repos = repos;
     })
-    
+    this.username = "" 
   }
  
   ngOnInit(){
-    
+    this.findUser("Akumucollins")
   }
 
 }

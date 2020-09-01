@@ -72,14 +72,14 @@ button {
   font-size: 20px;
 }
 
-.repos {
+#repos {
   background-color: rgba(211, 211, 211, 0.5);
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 0 10px white;
 }
 
-.repos:hover {
+#repos:hover {
   box-shadow: 0 0 10px black;
 }
 
@@ -123,8 +123,12 @@ h5 {
   color: #fff;
   font-size: 25px;
 }
+.cards{
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
-.repos a {
+#repos a {
   text-decoration-line: none;
 }
 
