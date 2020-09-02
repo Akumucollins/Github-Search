@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitsearchService } from '../gitsearch.service'
+import { Repositories } from '../repositories'
 
 @Component({
   selector: 'app-repositories',
@@ -8,9 +9,9 @@ import { GitsearchService } from '../gitsearch.service'
 })
 export class RepositoriesComponent implements OnInit {
 
-  details: any;
-  repos: any;
-  username: string;
+  // details: any;
+  repos: any = Repositories;
+  // username: string;
 
   constructor(private gitsearchService: GitsearchService) { }
   

@@ -1,5 +1,7 @@
 import { Component, OnInit, resolveForwardRef } from '@angular/core';
 import { GitsearchService } from '../gitsearch.service'
+import { Users } from '../users'
+import { Repositories} from '../repositories'
 import {FormsModule} from  '@angular/forms';
 
 @Component({
@@ -9,8 +11,8 @@ import {FormsModule} from  '@angular/forms';
 })
 export class GitsearchComponent implements OnInit {
 
-  details: any;
-  repos: any;
+  details: any = Users;
+  repos: any = Repositories;
   username: string = "Akumucollins";
   today: number = Date.now();
   
