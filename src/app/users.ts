@@ -12,6 +12,6 @@ export class Users {
         public public_repos: any,
         public bio: any,
         public blog: any,
-        public date: any,
+        public today: any,
     ) { }
 }

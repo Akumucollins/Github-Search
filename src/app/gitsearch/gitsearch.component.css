@@ -72,6 +72,47 @@ button {
   font-size: 20px;
 }
 
+.profileImg{
+  border-radius: 100%;
+  display: flex;
+  height: 365px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 350px;
+}
+
+
+.image {
+  height: 100%;
+}
+
+.overlay {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.25s;
+  z-index: 1;
+  background-color: rgba(211, 211, 211, 0.5);
+  background: linear-gradient(65deg, rgba(131, 126, 126, 0.5), rgba(18, 179, 243, 0.4));
+  font-size: 24px;
+  color: #fafafa;
+}
+
+.profileImg:hover .image {
+  opacity: 0.3;
+}
+
+.profileImg:hover .overlay {
+  opacity: 1;
+}
+
 #repos {
   background-color: rgba(211, 211, 211, 0.5);
   padding: 20px;
@@ -94,20 +135,21 @@ p a {
 }
 
 .profile img {
-  height: 250px;
-  width: 250px;
+  height: 365px;
+  width: 370px;
   margin-right: 5%;
 }
 
 .profile,
 .profilebox {
-  padding-top: 30px;
   margin-left: 10%;
   margin-right: 10%;
 }
 
 .profilebox {
-  padding-top: 35px;
+  box-shadow: 1px 1px 1px 1px rgba(211, 211, 211, 0.5);
+  background-color: rgba(211, 211, 211, 0.5);
+  padding: 30px;
 }
 
 .profilebox p {
@@ -123,7 +165,8 @@ h5 {
   color: #fff;
   font-size: 25px;
 }
-.cards{
+
+.cards {
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -134,4 +177,8 @@ h5 {
 
 h6 {
   font-family: 'Faster One', cursive;
+}
+
+hr {
+  background: aliceblue;
 }
