@@ -18,7 +18,7 @@ This project allows users to enter a GitHub username into a search input, submit
 ## Setup/Installation Requirements
 * get the project in github
 * copy and  paste the clone link in your terimnal
-* git clonehttps://github.com/Akumucollins/Github-Search.git to your local terminal
+* git clone https://github.com/Akumucollins/Github-Search.git to your local terminal
 * cd to the project directory
 * code . /atom . command  to open the text editor
 
