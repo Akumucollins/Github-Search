@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
 <div class="banner">
     <i class="fab fa-github fa-3x text-light"></i>
     <h1 class="pt-1 text-light pl-1" style="font-family: 'Londrina Shadow', cursive;font-size: 40px;">
@@ -31,11 +32,10 @@
                     </div>
                     <br><br>
                     <h6 class=" text-primary" style="font-family: 'Faster One', cursive;font-size: 20px;" appHighlight><i
-                            class="far fa-user-circle text-muted"></i>
+                        class="far fa-user-circle text-muted"></i>
                         &nbsp; {{details.name}} <b class="pl-2" style="font-size: 17px;color: aliceblue;">( {{details.login}} )</b></h6>
-                    <p class="pt-2 text-center" style="font-size: 25px;"><a href="{{details.html_url}}" target="_blank">View profile on Github</a></p>
-                    <p class="text-white text-center" style="font-family: 'Londrina Shadow', cursive;font-size: 22px;"><i class="fa fa-history text-muted" aria-hidden="true"></i>&nbsp;&nbsp;You've
-                        Viewed <b class="text-primary" style="font-size: 20px;">&nbsp;{{today | dateAgo}}</b> </p>
+                        <p class="pt-2 text-center" style="font-size: 25px;"><a href="{{details.html_url}}" target="_blank">View profile on Github</a></p>
+                    <p class="text-white text-center" style="font-family: 'Londrina Shadow', cursive;font-size: 22px;"><i class="fa fa-history text-muted" aria-hidden="true"></i>&nbsp;&nbsp;created &nbsp;:&nbsp;&nbsp;<b class="text-primary" style="font-size: 20px;">&nbsp;{{details.created_at | dateAgo}}</b> </p>
                 </div>
             </div>
             <div class="col-md-7">
@@ -85,8 +85,12 @@
                         <div class="card-body">
                             <p>{{repo.description}}</p>
                         </div>
-                        <div class="card-footer">
-                            <a href="{{repo.html_url}}" target="_blank">View this project on Github</a>
+                        <div class="card-footer text-center">
+                            <a href="{{repo.html_url}}" target="_blank"><button> <img src="https://img.icons8.com/ios-glyphs/20/000000/github.png"/>
+                            View this project on Github</button></a>
+                            <button>Forks {{repo.forks_count}}</button>
+                            <button>Language&nbsp;:&nbsp;{{repo.language}}</button>
+                            <button>Updated&nbsp;:&nbsp;{{repo.updated_at | date |dateAgo}}</button>
                         </div>
                     </div>
                 </div>
